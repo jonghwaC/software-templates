@@ -34,6 +34,10 @@ spec:
           ui:options:
             allowedKinds: 
               - Group
+        go_mod_url:
+          title: Go Module URL
+          type: string
+          description: go mod init <go_mod_url>
     - title: Choose a location  
       required:
         - repoUrl
@@ -58,7 +62,7 @@ spec:
           component_id: '{{ parameters.component_id }}'
           description: '{{ parameters.description }}'
           artifact_id: '{{ parameters.component_id }}'
-          go_mod_url: '{{ parameters.goModUrl }}'
+          go_mod_url: '{{ parameters.go_mod_url }}'
           owner: '{{ parameters.owner }}'
           destination: '{{ parseRepoUrl parameters.repoUrl }}'
 
